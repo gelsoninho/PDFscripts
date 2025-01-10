@@ -20,7 +20,7 @@ def extraire_total_13e_salaire(pdf_path):
                                 total_13e_salaire = float(mot.replace(',', '.'))  # Remplace la virgule par un point si besoin
         return total_13e_salaire
 
-dossier_pdf = "C:/Users/YOUR/PATH"
+dossier_pdf = "C:/Users/YOUR/PATH/"
 total_13e_salaire = 0
 
 # Parcours tous les fichiers PDF dans le dossier
