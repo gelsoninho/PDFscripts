@@ -3,7 +3,7 @@ import os
 
 def extraire_total_13e_salaire(pdf_path):
     with pdfplumber.open(pdf_path) as pdf:
-        total_13e_salaire = None
+        total_13e_salaire = 0
         # Parcours de chaque page du PDF
         for page in pdf.pages:
             texte = page.extract_text()
@@ -20,7 +20,7 @@ def extraire_total_13e_salaire(pdf_path):
                                 total_13e_salaire = float(mot.replace(',', '.'))  # Remplace la virgule par un point si besoin
         return total_13e_salaire
 
-dossier_pdf = "C:/Users/LocalAdmin/Documents/fichesSalaireFlexsis"
+dossier_pdf = "C:/Users/YOUR/PATH"
 total_13e_salaire = 0
 
 # Parcours tous les fichiers PDF dans le dossier
